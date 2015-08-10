@@ -1,0 +1,35 @@
+// examples to build on for the Processing class
+// sample code
+//-------------------------------------------------------------
+
+/* Use the mouse to drag blue or purple circles around the window! */
+
+void setup() {
+    size(480, 600);
+}
+
+void draw(){
+    if  (mousePressed) {
+        fill(255,0,255); }
+    else {
+        fill(0,0,255); }
+    ellipse(mouseX, mouseY, 50, 50);
+}
+    
+//-------------------------------------------------------------
+
+/* Use your mouse to craw an abstract design from lines that follow your mouse! */
+
+void setup(){
+    size(400, 400);
+    stroke(255);
+    background(192, 64, 0);
+}
+
+void draw() {
+    line(150, 25, mouseX, mouseY);
+}
+    
+    
+//-------------------------------------------------------------
+    
