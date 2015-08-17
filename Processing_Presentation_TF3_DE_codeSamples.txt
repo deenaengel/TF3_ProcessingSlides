@@ -1,0 +1,167 @@
+// examples to build on for the Processing class
+// sample code
+//-------------------------------------------------------------
+
+// sketch_1_line
+
+line(0,0,200,200); 
+
+//-------------------------------------------------------------
+
+// sketch_2_line
+
+background(0);
+stroke(255);
+line(0,0,200,200);
+
+//-------------------------------------------------------------
+
+sketch_3_circle
+
+size(400,400);
+background(255);
+stroke(0);
+fill(150,0,150);
+line(0,0,400,400);
+ellipse(200,200,100,100);
+
+//-------------------------------------------------------------
+
+// sketch_4_repetition
+
+size(400,400);
+background(255);
+stroke(0);
+line(0,0,400,400);
+fill(150,0,150);
+ellipse(200,200,100,100);
+/* setting up the ellipse parameters as integer variables: */
+int x = 200;
+int y = 200;
+int w = 100;
+int h = 100;
+/* Using repetition and change: */
+for (int i=1; i<6; i++) {
+  x = x+25;
+  y = y-25;
+  w = w-20;
+  h = h-20;
+  ellipse(x,y,w,h);
+}
+
+//-------------------------------------------------------------
+
+
+// sketch_4_usingFunctions
+
+void setup() {
+  size(400,400);
+  background(255);
+}
+void draw() {
+  stroke(0);
+  line(0,0,400,400);
+  fill(150,0,150);
+  ellipse(200,200,100,100);
+  /* setting up the ellipse parameters as integer variables: */
+  int x = 200;
+  int y = 200;
+  int w = 100;
+  int h = 100;
+  /* Using repetition and change: */
+  for (int i=1; i<6; i++) {
+    x = x+25;
+    y = y-25;
+    w = w-20;
+    h = h-20;
+    ellipse(x,y,w,h);
+  } 
+}
+
+//-------------------------------------------------------------
+
+// sketch_5_movingLine
+
+int i = 0;
+void setup() {
+  size(400,400);
+  stroke(0,0,255);
+}
+void draw() {
+  background(255);
+  line(0,i,400,i);   
+  i = i+2;
+  if (i>400) {
+     i=0;
+  }
+}  
+
+//-------------------------------------------------------------
+
+
+// sketch_5_vertical
+
+int i = 0;
+void setup() {
+  size(400,400);
+  stroke(0,0,255);
+}
+void draw() {
+  background(255);
+  line(i,0,i,400);   
+  i = i+2;
+  if (i>400) {
+     i=0;
+  }
+}  
+
+//-------------------------------------------------------------
+
+
+// sketch_6_mouse
+
+void setup() {
+  size(400,400);
+  background(255);
+  fill(150,0,150);
+}
+void draw() {
+  ellipse(mouseX,mouseY,50,50);
+}
+
+//-------------------------------------------------------------
+
+
+// sketch_6_mouse_colors
+
+void setup() {
+  size(400,400);
+  background(255);
+}
+void draw() {
+    if  (mousePressed) {
+        fill(150 ,0,150); }
+    else {
+        fill(0,0,255);    } 
+  ellipse(mouseX,mouseY,50,50);
+}
+
+
+    
+//-------------------------------------------------------------
+
+/* Use your mouse to craw an abstract design from lines that follow your mouse! */
+
+void setup(){
+    size(400, 400);
+    stroke(255);
+    background(192, 64, 0);
+}
+
+void draw() {
+    line(150, 25, mouseX, mouseY);
+}
+    
+    
+//-------------------------------------------------------------
+    
